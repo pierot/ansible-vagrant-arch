@@ -40,7 +40,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision :shell, :inline => $shell_boot
 
   config.vm.provision "ansible" do |ansible|
-    ansible.inventory_path = "hosts"
+    ansible.inventory_path = "hosts.local"
     ansible.verbose = "vv" # Temporary?
 
     ansible.sudo = true
