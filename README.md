@@ -7,18 +7,8 @@
 ## Install ansible locally
 
 `sudo easy_install pip`
+
 `sudo pip install ansible`
-
-# Ubuntu setup (ubutu-test/)
-
-Prepare image after first ssh login
-
-`sudo apt-get update`
-`sudo apt-get install python-software-properties`
-
-`sudo apt-add-repository ppa:rquillo/ansible`
-`sudo apt-get update`
-`sudo apt-get install ansible`
 
 # Arch Linux setup
 
