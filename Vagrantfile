@@ -26,7 +26,8 @@ Vagrant.configure("2") do |config|
   # In the example below, accessing "localhost:8080" will access
   # port 80 on the guest machine.
   config.vm.network :forwarded_port, guest: 80, host: 8080
-  # config.vm.network :forwarded_port, guest: 3000, host: 3030
+  config.vm.network :forwarded_port, guest: 8888, host: 8181
+  config.vm.network :forwarded_port, guest: 22, host: 3333, id: "ssh", auto_correct: true
 
   # Create a private network, which allows host-only access to
   # the machine using a specific IP.
@@ -52,8 +53,9 @@ Vagrant.configure("2") do |config|
   end
 
   # The optional third argument is a set of non-required options.
-  config.vm.synced_folder "~/Dropbox/Work", "/home/pierot/work", owner: "pierot", group: "pierot"
-  config.vm.synced_folder "~/Documents/Projects", "/home/pierot/projects", owner: "pierot", group: "pierot"
+  # config.vm.synced_folder "~/Downloads", "/home/pierot/tmp", owner: "pierot", group: "pierot"
+  # config.vm.synced_folder "~/Dropbox/Work", "/home/pierot/work", owner: "pierot", group: "pierot"
+  # config.vm.synced_folder "~/Documents/Projects", "/home/pierot/projects", owner: "pierot", group: "pierot"
 
   # The forward_agent option will allow you to use local SSH keys
   # to log in to remote services directly from the Vagrant/remote host.
