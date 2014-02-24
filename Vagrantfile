@@ -59,7 +59,7 @@ Vagrant.configure("2") do |config|
 
   # The forward_agent option will allow you to use local SSH keys
   # to log in to remote services directly from the Vagrant/remote host.
-  # config.ssh.forward_agent = true
+  config.ssh.forward_agent = true
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
